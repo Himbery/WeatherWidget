@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/city_etext"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="7dp"
+        android:background="@drawable/comment"
+        android:hint="   Укажите город"
+        style="@style/Text"/>
+
+
+    <RadioGroup
+        android:id="@+id/rgTime"
+        app:layout_constraintTop_toBottomOf="@id/city_etext"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radioOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="30 мин">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radioTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60 мин">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radioThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90 мин">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radioFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120 мин">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/radioFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24 часа">
+        </RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok_btn"
+        android:text="OK"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgTime"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
